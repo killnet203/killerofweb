@@ -10,6 +10,9 @@ let initWebRoutes = (app) => {
         return res.send("I'm killerofweb");
     });
 
+    router.get('/crud', homecontroller.getCRUD);
+    router.post('/post-crud', homecontroller.postCRUD);
+
     return app.use("/", router);
 }
 
